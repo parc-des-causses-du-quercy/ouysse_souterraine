@@ -1,0 +1,84 @@
+point_id: ouysse
+display_name: "Ouysse - Cabouy"
+latitude: 44.74
+
+karstmod:
+  params:
+    RA: 650.0
+    kCS: 0.239132
+    kMS: 0.0280713
+    kMC: 0.00164179
+    kEM: 0.000364827
+    kEC: 0.0000103
+    alphaMS: 3.59273
+    alphaMC: 2.05963
+    Emin: -15.0
+    aEM: 1.0
+    aEC: 1.0
+    aES: 1.0
+    kES: 0.0
+    kloss: 0.0
+    aloss: 1.0
+    Eloss: 100000.0
+  arpege_grid:
+    indices:
+      - [246, 336]
+      - [246, 337]
+      - [247, 335]
+      - [247, 336]
+      - [247, 337]
+      - [247, 338]
+      - [247, 339]
+      - [248, 335]
+      - [248, 336]
+      - [248, 337]
+      - [248, 338]
+    weights: [0.020, 0.063, 0.034, 0.171, 0.193, 0.126, 0.004, 0.102, 0.159, 0.083, 0.039]
+
+tributaries:
+  - basin_id: themines
+    gr4h_params:
+      X1: 289.604
+      X2: -1.837
+      X3: 59.018
+      X4: 5.03
+    catchment_area_km2: 55.62
+    arpege_grid:
+      indices:
+        - [247, 338]
+        - [247, 339]
+        - [248, 338]
+        - [248, 339]
+      weights: [0.043, 0.169, 0.212, 0.574]
+
+  - basin_id: alzou
+    gr4h_params:
+      X1: 320.608
+      X2: -1.475
+      X3: 53.888
+      X4: 26.696
+    catchment_area_km2: 53.2
+    arpege_grid:
+      indices:
+        - [248, 337]
+        - [248, 338]
+      weights: [0.275, 0.724]
+
+  # Theminettes: uncomment when available on the platform
+  # - basin_id: theminettes
+  #   gr4h_params:
+  #     X1: 220.0
+  #     X2: -0.15
+  #     X3: 60.0
+  #     X4: 3.5
+  #   catchment_area_km2: 42.1
+  #   arpege_grid:
+  #     indices:
+  #       - [247, 339]
+  #       - [247, 340]
+  #       - [248, 339]
+  #       - [248, 340]
+  #     weights: [0.790, 0.104, 0.097, 0.007]
+
+qsink_formula:
+  multiplier: 1.2

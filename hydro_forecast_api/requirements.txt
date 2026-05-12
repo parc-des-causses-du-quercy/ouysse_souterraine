@@ -1,0 +1,31 @@
+# Web framework
+Flask>=3.0,<4.0
+gunicorn>=22.0,<23.0
+flasgger>=0.9.7,<1.0
+flask-cors>=4.0,<5.0
+flask-limiter>=3.5,<4.0
+marshmallow>=3.20,<4.0
+
+# Logging
+python-json-logger>=3.0,<4.0
+
+# File locking
+filelock>=3.13,<4.0
+
+# Configuration
+PyYAML>=6.0,<7.0
+
+# Hydrological models
+hydrogr>=1.2,<2.0
+meteofetch>=0.5,<1.0
+PE-Oudin>=0.3,<1.0
+
+# Scientific computing
+numpy>=2.0,<3.0
+pandas>=2.0,<3.0
+xarray>=2024.0
+numba>=0.60,<1.0
+
+# GRIB support (for ARPEGE data)
+cfgrib>=0.9,<1.0
+eccodes>=2.30,<3.0

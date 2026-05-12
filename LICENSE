@@ -1,0 +1,85 @@
+# LICENSE
+
+Ce dépôt contient **deux strates distinctes de propriété intellectuelle** qu'il convient de bien identifier. Chaque strate relève des conditions décrites dans sa section.
+
+---
+
+## Préambule
+
+Le projet « Modèle de prévision hydrologique — Bassin de l'Ouysse » résulte de la collaboration entre :
+
+- **Synapse Informatique SARL** (ci-après « Synapse »), éditeur et intégrateur, qui a conçu et développé l'API de production, l'infrastructure de déploiement et la doc technique transverse ;
+- **Parc naturel régional des Causses du Quercy** (ci-après « le Parc »), commanditaire et utilisateur final, qui exploite la solution pour le suivi hydrologique de l'Ouysse ;
+- **Chercheurs du SNO Karst** (Service National d'Observation du Karst, INSU/CNRS) qui ont conçu et calibré le modèle scientifique KarstMod sur lequel repose la chaîne de prévision.
+
+Les contributions de ces parties sont **distinctes** et n'emportent pas appropriation mutuelle. La présente licence formalise cette répartition.
+
+---
+
+## Section A — Code d'intégration et infrastructure de production
+
+**Périmètre couvert** :
+
+- `hydro_forecast_api/` (dans son intégralité)
+- `deploy/` (dans son intégralité)
+- Fichiers de configuration et de documentation transverse à la racine du dépôt (`README.md`, `CLAUDE.md`, `.gitignore`)
+
+**Droits** : © 2025-2026 Synapse Informatique SARL. Tous droits réservés.
+
+**Concession au Parc naturel régional des Causses du Quercy** : Synapse concède au Parc, à titre non-exclusif et non-transférable, le droit d'utiliser, de déployer et de modifier le Code d'intégration pour les besoins propres du Parc dans le cadre du contrat d'intégration conclu entre les parties.
+
+**Restrictions** : sauf accord écrit préalable de Synapse :
+
+- pas de redistribution publique du Code d'intégration à des tiers ;
+- pas de revente, sous-licence ou commercialisation ;
+- pas de fork dans le but de produire un service concurrent ;
+- toute modification doit conserver les présentes mentions de droits.
+
+Le Code d'intégration est fourni « en l'état », sans garantie d'aucune sorte. La responsabilité de Synapse est limitée aux termes du contrat d'intégration.
+
+---
+
+## Section B — Code scientifique
+
+**Périmètre couvert** :
+
+- `research/` (dans son intégralité), comprenant notamment :
+  - le notebook chercheur de référence (`research/notebook/Modèle_Ouysse_corrigé.ipynb`) ;
+  - le script monolithique d'origine (`research/legacy_script/modèle_Ouysse.py`) ;
+  - les paramètres calibrés du modèle (`research/parameters/`) ;
+  - les états initiaux de référence (`research/states/`).
+
+**Droits** : ce contenu relève de la propriété intellectuelle du **Parc naturel régional des Causses du Quercy** et des **chercheurs du SNO Karst** ayant développé le modèle KarstMod, conformément aux accords les liant.
+
+**Position de Synapse** : Synapse Informatique SARL n'exerce **aucun droit de propriété intellectuelle** sur le contenu du dossier `research/`. Synapse l'utilise dans le cadre du contrat d'intégration mentionné en Section A, pour les besoins de l'API de production, et le conserve dans ce dépôt à des fins de **traçabilité scientifique** et de validation croisée API ↔ référence.
+
+Toute réutilisation, citation ou redistribution du contenu de `research/` requiert l'accord des titulaires (Parc naturel régional des Causses du Quercy et chercheurs du SNO Karst, selon leur arrangement interne). Voir `research/README.md` et `research/notebook/README.md` pour les détails d'attribution.
+
+---
+
+## Cas particulier — `hydro_forecast_api/app/models/karstmod_engine.py`
+
+Ce fichier, bien que situé dans le périmètre de la Section A, contient une **transposition quasi-textuelle** du moteur numérique du modèle KarstMod développé par les chercheurs du SNO Karst (cf. son en-tête). La logique scientifique reste la propriété intellectuelle de ses auteurs originaux (Section B) ; seuls l'encapsulation Python (signatures, intégration dans l'API) et la mise en package relèvent de Synapse.
+
+---
+
+## Références aux modèles scientifiques
+
+Les modèles utilisés dans ce projet sont des contributions de la communauté scientifique. Toute publication ou présentation s'appuyant sur ce code est invitée à citer leurs auteurs et institutions d'origine :
+
+- **KarstMod** — modèle d'aquifère karstique développé par les chercheurs du SNO Karst (Service National d'Observation du Karst, INSU/CNRS).
+- **GR4H** — modèle pluie-débit horaire de la famille GR développé par INRAE (anciennement IRSTEA / Cemagref).
+- **PE-Oudin** — formulation de l'évapotranspiration potentielle par Ludovic Oudin (INRAE).
+
+Pour les références bibliographiques précises, se rapporter à la documentation officielle des institutions citées.
+
+---
+
+## Coordonnées Synapse Informatique
+
+**Synapse Informatique SARL**
+SIREN : 408 960 326
+Siège social : 140 rue Clément François Prunelle, 34790 Grabels, France
+URL : https://synapse-info.com
+
+Pour toute question relative aux droits sur le Code d'intégration (Section A) ou pour toute demande d'extension de licence, contacter Synapse à l'adresse ci-dessus.

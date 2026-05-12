@@ -1,0 +1,38 @@
+# Ignorer l'environnement virtuel
+venv_model_ouysse/
+
+# Ignorer les fichiers temporaires
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorer les fichiers de notebook checkpoint
+.ipynb_checkpoints/
+
+# Ignorer les fichiers système Windows/mac
+Thumbs.db
+.DS_Store
+
+# Hydro Forecast API — runtime data
+hydro_forecast_api/data/
+hydro_forecast_api/states/
+hydro_forecast_api/backups/
+hydro_forecast_api/.env
+hydro_forecast_api/logs/*.log
+
+# Test venv
+venv_test/
+
+# Etats backup comparaison
+Etats_niveaux_réservoirs_backup_compare/
+
+# Claude Code
+.claude/
+
+# Pytest
+.pytest_cache/
+
+# Internal-only artifacts (excluded from client release)
+CLAUDE.md
+**/CLAUDE.md
