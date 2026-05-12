@@ -216,7 +216,7 @@ flowchart TD
 
     Warn -->|oui| LogWarn[log INFO<br/>'advance larger than usual']
     Warn -->|non| Normal[advance silencieux]
-    LogWarn --> NormalOK[advance_mask = ]state_ts, target_ts]<br/>sim_mask = tout > state_ts]
+    LogWarn --> NormalOK["advance_mask = ]state_ts, target_ts]<br/>sim_mask = tout > state_ts"]
     Normal --> NormalOK
 ```
 
