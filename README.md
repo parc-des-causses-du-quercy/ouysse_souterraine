@@ -58,9 +58,11 @@ Ce dépôt contient deux strates distinctes de propriété intellectuelle. Le fi
 
 Le code de production met en œuvre trois modèles issus de la communauté scientifique. Toute publication ou présentation s'appuyant sur ce projet est invitée à citer leurs auteurs et institutions :
 
-- **KarstMod** — modèle d'aquifère karstique (épikarst + matrice / conduit) développé par les chercheurs du **SNO Karst** (Service National d'Observation du Karst, INSU/CNRS).
-- **GR4H** — modèle pluie-débit horaire à 4 paramètres, famille GR développée par **INRAE** (anciennement IRSTEA / Cemagref).
-- **PE-Oudin** — formulation de l'évapotranspiration potentielle par Ludovic Oudin (INRAE).
+- [**KarstMod**](https://github.com/snokarst-tools/KarstMod) — modèle pluie-débit karstique développé par les chercheurs du **SNO Karst** (Service National d'Observation du Karst, INSU/CNRS).
+  
+- [**GR4H**](https://github.com/hydrogr/airgr) — modèle pluie-débit horaire à 4 paramètres, famille GR développée par **INRAE** (anciennement IRSTEA / Cemagref). Voir le package [airGR](https://hydrogr.github.io/airGR/).
+
+- [**PE-Oudin**](https://github.com/hydrogr/airgr) — formulation de l'évapotranspiration potentielle par Ludovic Oudin (INRAE), implémentée dans le package airGR.
 
 Pour les références bibliographiques précises de chaque modèle, se rapporter à la documentation officielle des institutions citées.
 
