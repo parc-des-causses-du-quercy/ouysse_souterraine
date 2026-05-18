@@ -19,9 +19,21 @@ import numpy as np
 import pandas as pd
 import pe_oudin
 import xarray as xr
-from meteofetch import Arpege01
+from meteofetch import Arpege01, Arpege025
 
 from .arpege_cache import get_cache
+
+# ---------------------------------------------------------------------------
+# Workaround : Météo-France a migré son dépôt PNT (MinIO -> OVH) le 2026-05-12,
+# cassant la `base_url_` hardcodée de meteofetch >=0.5,<1.0. Aucune version
+# upstream corrigée à ce jour (signalé par PNR Causses du Quercy 2026-05-18).
+# À retirer dès qu'une release meteofetch corrigée est publiée et épinglée
+# dans requirements.txt. Arpege025 inclus en future-proof bien que non utilisé.
+# ---------------------------------------------------------------------------
+_OVH_BASE_URL = "https://meteofrance-pnt.s3.rbx.io.cloud.ovh.net/pnt"
+for _cls in (Arpege01, Arpege025):
+    if hasattr(_cls, "base_url_"):
+        _cls.base_url_ = _OVH_BASE_URL
 
 # Suppress cfgrib/xarray FutureWarnings about compat defaults
 warnings.filterwarnings("ignore", category=FutureWarning, module="cfgrib")
