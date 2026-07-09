@@ -30,6 +30,10 @@ Swagger UI : http://localhost:5000/
 
 Voir [hydro_forecast_api/README.md](hydro_forecast_api/README.md) pour les exemples d'appels et la liste des endpoints.
 
+> **Exécution locale sur un PC Windows, sans pré-requis technique ?**
+> Suivre le guide pas à pas [QUICKSTART-WINDOWS.md](QUICKSTART-WINDOWS.md) (installation de Docker,
+> démarrage, lancement d'une prévision depuis le navigateur, consultation des états des réservoirs).
+
 ## Reproduire la chaîne d'origine ou valider l'API
 
 Le notebook chercheur (référence scientifique) et le script monolithique vivent dans [`research/`](research/). Pour rejouer la chaîne d'origine ou comparer l'API à la référence, voir [`research/README.md`](research/README.md).
