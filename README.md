@@ -2,7 +2,7 @@
 
 Ce dépôt contient le modèle de prévision des débits de l'Ouysse, rivière du Lot dont l'exutoire est une source karstique. Le système combine :
 
-- **GR4H** (`hydrogr`) — modèle pluie-débit pour la modélisélsation des affluents superficiels (Ouysse à Thémines, Francès à Théminettes,Alzou à Gramat).
+- **GR4H** (`hydrogr`) — modèle pluie-débit pour la modélisation des affluents superficiels (Ouysse à Thémines, Francès à Théminettes,Alzou à Gramat).
 - **KarstMod** — modèle pluie-débit pour la modélisation des résurgences karstiques de l'Ouysse, adapté pour réprésenter le fonctionnement binaire du bassin versant. 
 - **ARPEGE** (`meteofetch`) — données de prévision météo Météo-France comme forçage pluie/température.
 - **PE-Oudin** (`pe_oudin`) — calcul de l'évapotranspiration potentielle.
